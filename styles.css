@@ -190,3 +190,15 @@ h1,h2,h3,h4{font-family:var(--fuente-titulos);font-weight:600;line-height:1.05;l
   .aparecer{opacity:1;transform:none}
 }
 
+
+/* Accesibilidad: Mejorar navegación por teclado */
+:focus-visible {
+  outline: 3px solid var(--verde);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Eliminar outline predeterminado si no es navegación por teclado (opcional, focus-visible ya lo maneja bien en navegadores modernos, pero por si acaso) */
+:focus:not(:focus-visible) {
+  outline: none;
+}
