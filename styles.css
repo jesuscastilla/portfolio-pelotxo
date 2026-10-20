@@ -190,3 +190,10 @@ h1,h2,h3,h4{font-family:var(--fuente-titulos);font-weight:600;line-height:1.05;l
   .aparecer{opacity:1;transform:none}
 }
 
+
+/* Accesibilidad teclado */
+:focus-visible {
+  outline: 2px solid var(--verde-oscuro);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
