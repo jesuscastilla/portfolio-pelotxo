@@ -160,6 +160,28 @@ h1,h2,h3,h4{font-family:var(--fuente-titulos);font-weight:600;line-height:1.05;l
 .campo input:focus,.campo textarea:focus{outline:none;border-color:var(--verde);box-shadow:0 0 0 3px var(--verde-claro);background:#fff}
 .campo textarea{resize:vertical;min-height:140px}
 
+/* Accesibilidad */
+:focus-visible {
+  outline: 3px solid var(--verde);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--verde);
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 /* Animaciones */
 .aparecer{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
 .aparecer.visible{opacity:1;transform:none}
