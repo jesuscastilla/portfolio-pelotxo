@@ -1,0 +1,190 @@
+/* ==========================================================================
+   Currículum A4 · Jesús Castilla (DiploTech)
+   Paleta y tipografías del portfolio: styles.css
+   ========================================================================== */
+
+:root{
+  --papel:#F7F5EF;
+  --papel-2:#EFECE1;
+  --tinta:#1A231A;
+  --tinta-suave:#5B6658;
+  --tinta-claro:#8A9487;
+  --verde:#70B060;
+  --verde-oscuro:#4E8A3E;
+  --verde-profundo:#1F3320;
+  --verde-claro:#EAF3E3;
+  --linea:#E4DFD0;
+  --blanco:#FFFFFF;
+  --fuente:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --fuente-titulos:"Fraunces",Georgia,"Times New Roman",serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{-webkit-text-size-adjust:100%}
+
+body{
+  font-family:var(--fuente);
+  color:var(--tinta);
+  background:#D8D4C6;
+  line-height:1.5;
+  font-size:15px;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+/* ---------- Página A4 ---------- */
+.pagina{
+  width:210mm;
+  min-height:297mm;
+  background:var(--papel);
+  margin:10mm auto;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 8px 30px -12px rgba(26,35,26,.5);
+  page-break-after:always;
+  break-after:page;
+}
+.pagina:last-child{page-break-after:auto;break-after:auto}
+
+@page{size:A4;margin:0}
+
+@media print{
+  body{background:#fff}
+  .pagina{margin:0;box-shadow:none;width:210mm;min-height:296mm;page-break-after:always;break-after:page}
+  .pagina:last-child{page-break-after:auto;break-after:auto}
+  .no-print{display:none !important}
+}
+
+*{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important}
+
+/* ---------- Cabecera (banda verde) ---------- */
+.cabecera{
+  background:var(--verde-profundo);
+  color:#fff;
+  padding:11mm 16mm 10mm;
+  display:flex;
+  align-items:center;
+  gap:8mm;
+}
+.cabecera__logo{width:24mm;height:24mm;object-fit:contain;flex-shrink:0}
+.cabecera__texto h1{
+  font-family:var(--fuente-titulos);
+  font-weight:600;
+  font-size:25pt;
+  line-height:1;
+  letter-spacing:-.01em;
+  color:#fff;
+}
+.cabecera__texto .rol{font-weight:600;font-size:10.5pt;color:#C9DCC2;margin-top:1.5mm}
+.cabecera__texto .lema{font-family:var(--fuente-titulos);font-style:italic;font-size:9.5pt;color:#9FB99A;margin-top:1mm}
+
+/* ---------- Contacto ---------- */
+.contacto{
+  background:var(--papel-2);
+  border-bottom:1px solid var(--linea);
+  padding:3mm 16mm;
+  display:flex;
+  flex-wrap:wrap;
+  gap:1mm 0;
+  list-style:none;
+  font-size:8.4pt;
+  font-weight:600;
+  color:var(--tinta-suave);
+}
+.contacto li{display:inline-flex;align-items:center}
+.contacto li + li::before{content:"·";margin:0 2.6mm;color:var(--verde-oscuro);font-weight:800}
+.contacto a{color:var(--verde-oscuro);text-decoration:none}
+
+/* ---------- Cuerpo ---------- */
+.cuerpo{padding:6mm 16mm 7mm}
+
+.seccion{margin-top:5mm}
+.seccion:first-child{margin-top:0}
+
+.ceja{
+  display:inline-flex;
+  align-items:center;
+  gap:2.6mm;
+  font-size:7.4pt;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--verde-oscuro);
+  margin-bottom:1.6mm;
+}
+.ceja::before{content:"";width:8mm;height:2px;background:var(--verde)}
+
+h2{font-family:var(--fuente-titulos);font-weight:600;font-size:15pt;line-height:1.05;letter-spacing:-.01em;color:var(--tinta)}
+
+/* ---------- Perfil ---------- */
+.perfil p{font-size:9.6pt;color:var(--tinta);line-height:1.55}
+.perfil strong{color:var(--verde-oscuro)}
+
+/* ---------- Experiencia ---------- */
+.experiencia__entidad{display:flex;align-items:baseline;gap:4mm;margin:0 0 2mm}
+.experiencia__entidad h3{font-family:var(--fuente-titulos);font-size:12.5pt;font-weight:600;color:var(--tinta)}
+.experiencia__entidad .periodo{margin-left:auto;font-size:8.4pt;font-weight:800;letter-spacing:.02em;color:var(--verde-oscuro);white-space:nowrap}
+.experiencia__intro{font-size:8.8pt;color:var(--tinta-suave);margin-bottom:2.6mm}
+
+.lista{list-style:none}
+.lista li{position:relative;padding-left:4.6mm;font-size:9.2pt;color:var(--tinta);margin-bottom:2mm}
+.lista li::before{content:"";position:absolute;left:0;top:2.2mm;width:2.2mm;height:2.2mm;border-radius:50%;background:var(--verde)}
+.lista li b{color:var(--verde-oscuro)}
+.lista li .lugar{color:var(--tinta-suave);font-size:8.2pt}
+/* ---------- Stack ---------- */
+.stack{display:grid;grid-template-columns:repeat(5,1fr);gap:2.4mm;margin-top:1.4mm}
+.stack__grupo{background:var(--blanco);border:1px solid var(--linea);border-radius:8px;padding:2.6mm 2.8mm}
+.stack__grupo h4{font-size:7.2pt;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--verde-oscuro);margin-bottom:1.4mm}
+.stack__items{display:flex;flex-wrap:wrap;gap:1.2mm}
+.stack__items span{font-size:7.4pt;font-weight:600;color:var(--tinta-suave);background:var(--verde-claro);border-radius:99px;padding:.6mm 2mm}
+
+/* ---------- Idiomas ---------- */
+.idiomas{display:flex;gap:6mm;margin-top:4mm;padding-top:3mm;border-top:1px solid var(--linea);font-size:8.6pt;color:var(--tinta)}
+.idiomas b{color:var(--verde-oscuro)}
+.idiomas .nivel{color:var(--tinta-suave);font-weight:600}
+
+/* ---------- Voluntariado (página 2) ---------- */
+.voluntariado__item{display:grid;grid-template-columns:1fr auto;gap:.4mm 4mm;padding:2.8mm 0;border-bottom:1px solid var(--linea)}
+.voluntariado__item:last-child{border-bottom:0}
+.voluntariado__cargo{font-weight:800;font-size:9.6pt;color:var(--tinta)}
+.voluntariado__entidad{font-size:9.6pt;color:var(--verde-oscuro);font-weight:600}
+.voluntariado__meta{grid-column:2;grid-row:1 / span 2;text-align:right;font-size:8.2pt;font-weight:700;color:var(--tinta-suave);white-space:nowrap}
+.voluntariado__meta span{display:block}
+.voluntariado__meta .ambito{color:var(--verde-oscuro);font-size:7.4pt;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.voluntariado__desc{grid-column:1 / -1;font-size:8.7pt;color:var(--tinta-suave);margin-top:.6mm}
+
+/* ---------- Otros proyectos ---------- */
+.proyectos{list-style:none;margin-top:1.6mm}
+.proyectos li{display:flex;gap:4mm;justify-content:space-between;padding:2mm 0;border-bottom:1px solid var(--linea);font-size:8.8pt}
+.proyectos li:last-child{border-bottom:0}
+.proyectos b{color:var(--verde-oscuro)}
+.proyectos .det{color:var(--tinta-suave)}
+.proyectos a{color:var(--verde-oscuro);text-decoration:none;font-weight:600;white-space:nowrap}
+
+/* ---------- Pie ---------- */
+.pie{position:absolute;bottom:0;left:0;right:0;padding:0 16mm 6mm;font-size:7.8pt;color:var(--tinta-claro);display:flex;justify-content:space-between;align-items:center}
+.pie a{color:var(--verde-oscuro);text-decoration:none}
+
+/* ---------- Botón de pantalla ---------- */
+.barra{position:fixed;bottom:14px;right:14px;z-index:10;display:flex;gap:8px}
+.barra a{font-family:var(--fuente);font-weight:700;font-size:13px;text-decoration:none;color:#fff;background:var(--verde-oscuro);padding:10px 16px;border-radius:99px;box-shadow:0 6px 18px -8px rgba(26,35,26,.5)}
+.barra a:hover{background:var(--verde)}
+
+/* ---------- QR de la web (cabecera) ---------- */
+.cabecera__qr{
+  margin-left:auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:1mm;
+  background:var(--blanco);
+  border-radius:6px;
+  padding:1.6mm;
+  text-decoration:none;
+  flex-shrink:0;
+}
+.cabecera__qr img{width:17mm;height:17mm;display:block}
+.cabecera__qr span{font-size:6.2pt;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--tinta)}
+
+

@@ -29,6 +29,9 @@ portfolio-pelotxo/
 ├── contacto.html     # Contacto (ES): enlaces + formulario
 ├── contacto-en.html  # Contacto (EN)
 ├── styles.css        # Hoja de estilos global (rediseño 2026)
+├── curriculum.html   # Currículum A4 imprimible (ES) — añadido 2026-10-26
+├── curriculum.css    # Estilos del currículum A4 (paleta y tipografías del sitio)
+├── curriculum.pdf    # Exportación PDF A4 (generada con Chrome headless)
 ├── assets/           # Logo DiploTech, favicon y apple-touch-icon
 └── CONTEXT.md        # Documentación técnica (este archivo)
 ```
@@ -71,3 +74,20 @@ Este proyecto está diseñado para alojarse en el NAS Synology de Jesús (`pelot
 1. **Mantener la formalidad:** El tono del texto debe ser siempre profesional, directo y formal.
 2. **Tono profesional:** el texto debe reflejar un perfil profesional de desarrollador (sin el antiguo descargo de «hobby no comercial»), manteniendo la autenticidad.
 
+---
+
+## [26-10-2026] — Currículum A4 imprimible (ES)
+
+- **Tipo:** Vista
+- **Cambio:** añadida una vista de currículum vitae en A4 real (210×297 mm) compuesta por `curriculum.html` + `curriculum.css`, con `@page { size: A4; margin: 0 }`, paleta del sitio (`#F7F5EF`, `#1A231A`, `#70B060`, `#4E8A3E`, `#1F3320`, `#EAF3E3`), tipografías Fraunces/Manrope y logo DiploTech (`assets/logo-blanco.png`). Dos páginas: (1) perfil, experiencia técnica DiploTech 2026–Actualidad y stack; (2) voluntariado (Cibervoluntarios, San Juan de Dios, ACOGr, Federación Arco Iris, Amnistía Internacional, Greenpeace), formación autodidacta y otros proyectos. Incluye un código QR (`assets/qr-web.png`, 256×256, enlace al portfolio) en la cabecera de la página 1.
+- **Impacto:** solo los archivos nuevos `curriculum.{html,css,pdf}`; no modifica `index.html`, `styles.css` ni las páginas existentes.
+- **Datos del titular (verificados con el interesado):** teléfono `+34 644 707 327` (prevalece sobre el `+34687407347` que consta en la sección de contacto de este documento) e inglés nivel C1.
+
+
+---
+
+## [30-10-2026] — Dominio propio diplotech.es (migración GitHub Pages)
+
+- **Tipo:** Configuración
+- **Cambio:** dominio `diplotech.es` (registrado en Piensa Solutions) preparado para servir el portfolio desde GitHub Pages. Añadidos `CNAME`, `robots.txt`, `sitemap.xml` (5 URLs) y `404.html` con identidad DiploTech. SEO completo en las 5 páginas (canonical, Open Graph, Twitter Cards, hreflang ES/EN y JSON-LD Person/Organization en inicio ES/EN). El workflow `pages.yml` ahora publica además `curriculum.{html,css,pdf}`, `CNAME`, `404.html`, `robots.txt` y `sitemap.xml`. QR del currículum y enlaces actualizados a `https://diplotech.es/`; `curriculum.pdf` regenerado (2 páginas A4, 515 KB).
+- **Impacto:** todo el sitio. Pendiente: aplicar DNS en Piensa Solutions (A/AAAA de GitHub Pages, CNAME www) y activar el dominio personalizado en GitHub Settings → Pages. El correo (MX `mx.buzondecorreo.com` + SPF) no se ve afectado. Cambios sin commit a la espera de la configuración DNS.
