@@ -91,3 +91,12 @@ Este proyecto está diseñado para alojarse en el NAS Synology de Jesús (`pelot
 - **Tipo:** Configuración
 - **Cambio:** dominio `diplotech.es` (registrado en Piensa Solutions) preparado para servir el portfolio desde GitHub Pages. Añadidos `CNAME`, `robots.txt`, `sitemap.xml` (5 URLs) y `404.html` con identidad DiploTech. SEO completo en las 5 páginas (canonical, Open Graph, Twitter Cards, hreflang ES/EN y JSON-LD Person/Organization en inicio ES/EN). El workflow `pages.yml` ahora publica además `curriculum.{html,css,pdf}`, `CNAME`, `404.html`, `robots.txt` y `sitemap.xml`. QR del currículum y enlaces actualizados a `https://diplotech.es/`; `curriculum.pdf` regenerado (2 páginas A4, 515 KB).
 - **Impacto:** todo el sitio. **Aplicado (05-11-2026):** DNS en Piensa Solutions (4 registros A de GitHub Pages + CNAME `www`), dominio personalizado activado en GitHub Pages, HTTPS con certificado emitido y desplegado el commit `1976d91` (CNAME + SEO + currículum + QR). Pendiente del usuario: marcar **Enforce HTTPS** en GitHub Settings → Pages. El correo (MX `mx.buzondecorreo.com` + SPF) no se ve afectado.
+
+---
+
+## [05-11-2026] — Páginas legales (aviso legal y privacidad)
+
+- **Tipo:** Vista
+- **Cambio:** añadidas viso-legal.html y privacidad.html (con canonical, estética del sitio y marcadores [NIF]/[DIRECCIÓN] pendientes de los datos fiscales del titular), enlazadas desde el pie de las 4 páginas (ES: «Aviso legal»/«Privacidad»; EN: «Legal notice»/«Privacy»). Añadidas al sitemap.xml (prioridad 0.3) y al workflow pages.yml. Commit 346f3a5 desplegado.
+- **Impacto:** todo el sitio (footers, sitemap, despliegue).
+
