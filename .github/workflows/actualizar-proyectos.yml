@@ -1,0 +1,36 @@
+name: Actualizar proyectos desde GitHub API
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Regenerar sección de proyectos
+        run: python scripts/generar_proyectos.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit si hay cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --exit-code --quiet; then
+            git add index.html index-en.html
+            git commit -m "chore: actualizar proyectos desde GitHub API"
+            git push
+          else
+            echo "Sin cambios"
+          fi
