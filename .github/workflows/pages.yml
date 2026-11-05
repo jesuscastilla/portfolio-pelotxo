@@ -26,7 +26,7 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir -p _site
-          cp index.html index-en.html contacto.html contacto-en.html curriculum.html curriculum.css curriculum.pdf styles.css google04c6afc95106a812.html robots.txt sitemap.xml 404.html _site/
+          cp index.html index-en.html contacto.html contacto-en.html curriculum.html curriculum.css curriculum.pdf styles.css google04c6afc95106a812.html robots.txt sitemap.xml 404.html aviso-legal.html privacidad.html _site/
           cp -r assets _site/
           if [ -f CNAME ]; then cp CNAME _site/; fi
 
