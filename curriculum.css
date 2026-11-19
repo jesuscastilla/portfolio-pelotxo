@@ -99,7 +99,7 @@ body{
 /* ---------- Cuerpo ---------- */
 .cuerpo{padding:6mm 16mm 7mm}
 
-.seccion{margin-top:5mm}
+.seccion{margin-top:4mm}
 .seccion:first-child{margin-top:0}
 
 .ceja{
@@ -156,7 +156,7 @@ h2{font-family:var(--fuente-titulos);font-weight:600;font-size:15pt;line-height:
 
 /* ---------- Otros proyectos ---------- */
 .proyectos{list-style:none;margin-top:1.6mm}
-.proyectos li{display:flex;gap:4mm;justify-content:space-between;padding:2mm 0;border-bottom:1px solid var(--linea);font-size:8.8pt}
+.proyectos li{display:flex;gap:4mm;justify-content:space-between;padding:1.4mm 0;border-bottom:1px solid var(--linea);font-size:8.8pt}
 .proyectos li:last-child{border-bottom:0}
 .proyectos b{color:var(--verde-oscuro)}
 .proyectos .det{color:var(--tinta-suave)}

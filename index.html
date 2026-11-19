@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jesús Castilla — Desarrollador de software. Apps Android e iOS, web/PWA, backend e infraestructura. Fundador de DiploTech.">
+  <meta name="description" content="Jesús Castilla — Desarrollador de software. Apps Android e iOS, web/PWA, backend, Linux, infraestructura y hardware. Fundador de DiploTech.">
   <link rel="canonical" href="https://diplotech.es/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="DiploTech">
@@ -26,6 +26,7 @@
     "@type": "Person",
     "name": "Jesús Castilla Lacal",
     "jobTitle": "Desarrollador de Software",
+    "knowsAbout": ["Desarrollo de software", "Android", "Kotlin", "iOS", "Swift", "React", "PHP", "Linux", "Docker", "ZimaOS", "Infraestructura", "Montaje de equipos"],
     "url": "https://diplotech.es/",
     "email": "mailto:hola@diplotech.es",
     "telephone": "+34644707327",
@@ -91,7 +92,8 @@
         <div class="sobre-mi__cuerpo">
           <p>Creo que la tecnología debería comportarse como un buen mayordomo: discreta, atenta, casi invisible. Que esté cuando hace falta y se aparte cuando no. Por eso construyo software que se pliega a las personas, y no al revés.</p>
           <p>Nunca he estudiado programación, ni nada parecido: soy autodidacta por completo. Me he dedicado siempre al voluntariado y a trabajos al servicio de las personas; la informática, en cambio, es mi auténtica pasión. Y últimamente he descubierto que no hay mayor placer que trabajar de lo que es tu vocación.</p>
-          <p>Durante los últimos años he dado forma, de principio a fin, a los productos digitales de la <strong>Barrioteca Acalencá</strong> y de la asociación <strong>Lebeche</strong>: apps Android e iOS, una web, un backend y la infraestructura que los sostiene. Cada línea de código, un gesto de cuidado.</p>
+          <p>Durante los últimos años he dado forma, de principio a fin, a los productos digitales de la <strong>Barrioteca Acalencá</strong> y de la asociación <strong>Lebeche</strong>: apps Android e iOS, una web, un backend, Linux y la infraestructura que los sostiene. Cada línea de código, un gesto de cuidado.</p>
+          <p>También me muevo con soltura en Linux y en el hardware: administro servidores, contenedores y redes, y monto, desmonto y actualizo equipos para darles una segunda vida.</p>
           <p>Bajo la marca <strong>DiploTech</strong> agrupo este oficio: tecnología honesta, al servicio de quien la usa.</p>
         </div>
       </div>
@@ -118,11 +120,15 @@
           </div>
           <div class="stack__grupo">
             <h3>Backend</h3>
-            <div class="stack__items"><span>PHP</span><span>MariaDB</span><span>REST APIs</span><span>Docker</span></div>
+            <div class="stack__items"><span>PHP</span><span>MariaDB</span><span>REST APIs</span><span>SLiMS</span></div>
           </div>
           <div class="stack__grupo">
             <h3>Sistemas</h3>
-            <div class="stack__items"><span>Linux</span><span>Nginx</span><span>Bash</span><span>Synology (NAS)</span></div>
+            <div class="stack__items"><span>Linux</span><span>ZimaOS</span><span>Docker</span><span>Nginx</span><span>Bash</span><span>Synology (NAS)</span></div>
+          </div>
+          <div class="stack__grupo">
+            <h3>Hardware</h3>
+            <div class="stack__items"><span>Montaje y desmontaje</span><span>Diagnóstico</span><span>Actualización de componentes</span><span>Refrigeración</span><span>Instalación de sistemas</span></div>
           </div>
         </div>
       </div>
@@ -132,7 +138,7 @@
         <div class="seccion__cabecera aparecer">
           <span class="ceja">03 · Trabajo seleccionado</span>
           <h2 class="seccion__titulo">Proyectos</h2>
-          <p class="seccion__intro">Productos reales, en producción, diseñados y desarrollados de extremo a extremo.</p>
+          <p class="seccion__intro">Productos reales en producción y proyectos de I+D propios, diseñados y desarrollados de extremo a extremo.</p>
         </div>
         <div class="grid">
         <!-- PROYECTOS:INICIO -->
@@ -145,7 +151,7 @@
           <article class="proyecto aparecer">
             <div class="proyecto__top"><span class="proyecto__tag">Android · Kotlin</span><span class="proyecto__num">02</span></div>
             <h3 class="proyecto__titulo">Mondera's App</h3>
-            <p class="proyecto__texto">Calendario CalDAV, correo, web y drive unificados en una sola app para las organizadoras de Lebeche.</p>
+            <p class="proyecto__texto">Calendario CalDAV (Nextcloud), correo, panel web y explorador de archivos de Synology unificados en una sola app Android para las organizadoras de Lebeche; Material 3 y modo oscuro.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://github.com/jesuscastilla/monderas-app" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
           <article class="proyecto aparecer">
@@ -161,38 +167,55 @@
             <div class="proyecto__enlaces"><a class="flecha" href="https://www.corrientelebeche.es/lebeche/" target="_blank" rel="noopener">En vivo ↗</a><a class="flecha" href="https://github.com/jesuscastilla/lebeche-web" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
           <article class="proyecto aparecer">
-            <div class="proyecto__top"><span class="proyecto__tag">iOS · Swift</span><span class="proyecto__num">05</span></div>
+            <div class="proyecto__top"><span class="proyecto__tag">Cloud · Docker</span><span class="proyecto__num">05</span></div>
+            <h3 class="proyecto__titulo">Nube Lebeche — Nextcloud</h3>
+            <p class="proyecto__texto">Nube privada autohospedada para la asociación Lebeche: Nextcloud 35 en Docker sobre Synology, con archivos compartidos por comisiones, calendarios CalDAV, contactos CardDAV, correo integrado y edición ofimática colaborativa.</p>
+            <div class="proyecto__enlaces"><a class="flecha" href="https://nube.corrientelebeche.es/" target="_blank" rel="noopener">En vivo ↗</a><a class="flecha" href="https://github.com/jesuscastilla/lebeche-nextcloud" target="_blank" rel="noopener">GitHub ↗</a></div>
+          </article>
+          <article class="proyecto aparecer">
+            <div class="proyecto__top"><span class="proyecto__tag">iOS · Swift</span><span class="proyecto__num">06</span></div>
             <h3 class="proyecto__titulo">Barrioteca — iOS</h3>
             <p class="proyecto__texto">Cascarón nativo (WKWebView + SwiftUI) con acceso a cámara para el escáner de códigos.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://github.com/jesuscastilla/barrioteca-ios" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
           <article class="proyecto aparecer">
-            <div class="proyecto__top"><span class="proyecto__tag">Backend · PHP</span><span class="proyecto__num">06</span></div>
+            <div class="proyecto__top"><span class="proyecto__tag">Backend · PHP</span><span class="proyecto__num">07</span></div>
             <h3 class="proyecto__titulo">Backend SLiMS</h3>
             <p class="proyecto__texto">API REST y scripts de importación de ISBN sobre SLiMS (PHP 8 + MariaDB).</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://www.corrientelebeche.es/slims/" target="_blank" rel="noopener">En vivo ↗</a><a class="flecha" href="https://github.com/jesuscastilla/barrioteca-slims" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
           <article class="proyecto aparecer">
-            <div class="proyecto__top"><span class="proyecto__tag">Sistemas · Linux</span><span class="proyecto__num">07</span></div>
+            <div class="proyecto__top"><span class="proyecto__tag">Sistemas · Linux</span><span class="proyecto__num">08</span></div>
             <h3 class="proyecto__titulo">TapeOS</h3>
-            <p class="proyecto__texto">Sistema operativo propio de software libre, hecho en Andalucía, basado en ChromeOS/ChromiumOS con Google Apps opcionales.</p>
+            <p class="proyecto__texto">Sistema operativo propio de software libre, hecho en Andalucía, basado en ChromeOS/ChromiumOS, con instalador nativo para Windows y Google Apps opcionales.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://github.com/jesuscastilla/TapeOS" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
           <article class="proyecto aparecer">
-            <div class="proyecto__top"><span class="proyecto__tag">Infraestructura</span><span class="proyecto__num">08</span></div>
+            <div class="proyecto__top"><span class="proyecto__tag">Infraestructura</span><span class="proyecto__num">09</span></div>
             <h3 class="proyecto__titulo">Infraestructura NAS</h3>
-            <p class="proyecto__texto">Hosting autogestionado: reglas Nginx, cifrado y proxies inversos sirviendo múltiples proyectos desde un Synology Web Station.</p>
+            <p class="proyecto__texto">Hosting autogestionado en Synology: Web Station + Nginx, Docker, certificados, proxies inversos con Cloudflare y servicios como Nextcloud, correo y newsletter.</p>
           </article>
           <article class="proyecto aparecer">
-            <div class="proyecto__top"><span class="proyecto__tag">Sistemas · Hackintosh</span><span class="proyecto__num">09</span></div>
-            <h3 class="proyecto__titulo">Hackintosh — macOS en PC</h3>
-            <p class="proyecto__texto">macOS Sonoma 14 sobre hardware no-Apple (ASUS Z590 + i5-11600K + GTX 970): EFI OpenCore, doble arranque con rEFInd, parcheo gráfico OCLP y Wi-Fi/Bluetooth Intel.</p>
-            <div class="proyecto__enlaces"><a class="flecha" href="https://github.com/jesuscastilla/hackintosh-Z590" target="_blank" rel="noopener">GitHub ★ 1 ↗</a></div>
+            <div class="proyecto__top"><span class="proyecto__tag">Infraestructura · Linux</span><span class="proyecto__num">10</span></div>
+            <h3 class="proyecto__titulo">Servidor auxiliar ZimaOS</h3>
+            <p class="proyecto__texto">Servidor x86 con ZimaOS dedicado a los servicios Docker de Lebeche: OnlyOffice para edición ofimática y HPB (High Performance Backend) para Nextcloud Talk, con almacenamiento persistente, arranque automático y actualizaciones controladas.</p>
           </article>
           <article class="proyecto aparecer">
-            <div class="proyecto__top"><span class="proyecto__tag">Android · Ingeniería inversa</span><span class="proyecto__num">10</span></div>
+            <div class="proyecto__top"><span class="proyecto__tag">Sistemas · Hackintosh</span><span class="proyecto__num">11</span></div>
+            <h3 class="proyecto__titulo">Hackintosh — macOS 26 en PC</h3>
+            <p class="proyecto__texto">macOS 26 Tahoe sobre hardware no-Apple (ASUS PRIME Z590-P WIFI + i5-11600K + RX 5700 XT): OpenCore 1.0.8, SMBIOS MacPro7,1, Wi-Fi/Bluetooth Intel AX201 y arranque dual con Windows.</p>
+            <div class="proyecto__enlaces"><a class="flecha" href="https://github.com/jesuscastilla/hackintosh-Z590" target="_blank" rel="noopener">GitHub ↗</a></div>
+          </article>
+          <article class="proyecto aparecer">
+            <div class="proyecto__top"><span class="proyecto__tag">Android · Ingeniería inversa</span><span class="proyecto__num">12</span></div>
             <h3 class="proyecto__titulo">GBOS-PixelTablet</h3>
             <p class="proyecto__texto">Ingeniería inversa y port de la interfaz de escritorio de GoogleBookOS (Aluminium OS, Android 17) a una Pixel Tablet sin root: extracción de particiones EROFS, auditoría de APKs, análisis de flags aconfig/Phenotype y una app lanzadora nativa.</p>
+          </article>
+          <article class="proyecto aparecer">
+            <div class="proyecto__top"><span class="proyecto__tag">I+D · Android x86</span><span class="proyecto__num">13</span></div>
+            <h3 class="proyecto__titulo">GoogleTVx86</h3>
+            <p class="proyecto__texto">Port nativo de Google TV (Android 16 x86_64) a PCs: arranque desde USB o instalación en disco, HALs reales de hardware en lugar de los del emulador y soporte de Play Store. Proyecto de I+D en fase inicial.</p>
+            <div class="proyecto__enlaces"><a class="flecha" href="https://github.com/jesuscastilla/GoogleTVx86" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
         <!-- PROYECTOS:FIN -->
         </div>
