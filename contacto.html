@@ -35,6 +35,7 @@
       <nav class="menu" id="menu">
         <a href="index.html#sobre-mi">Sobre mí</a>
         <a href="index.html#proyectos">Proyectos</a>
+        <a href="curriculum.html">CV</a>
         <a href="contacto.html" class="activo">Contacto</a>
         <span class="menu__sep" aria-hidden="true"></span>
         <a href="contacto.html" class="idioma activo">ES</a>
@@ -87,6 +88,7 @@
         <div class="pie__marca"><img src="assets/logo-blanco.png" alt="DiploTech"><span>Jesús Castilla</span></div>
         <nav class="pie__enlaces">
           <a href="index.html">Inicio</a>
+          <a href="curriculum.html">Currículum</a>
           <a href="contacto.html">Contacto</a>
           <a href="https://github.com/jesuscastilla" target="_blank" rel="noopener">GitHub</a>
           <a href="https://www.linkedin.com/in/jesuscastillalacal" target="_blank" rel="noopener">LinkedIn</a>
@@ -101,10 +103,22 @@
   <script>
     const botonMenu = document.getElementById('botonMenu');
     const menu = document.getElementById('menu');
+    function cerrarMenu() {
+      menu.classList.remove('abierto');
+      botonMenu.classList.remove('activo');
+      botonMenu.setAttribute('aria-expanded', 'false');
+    }
     botonMenu.addEventListener('click', () => {
       const abierto = menu.classList.toggle('abierto');
       botonMenu.classList.toggle('activo', abierto);
       botonMenu.setAttribute('aria-expanded', String(abierto));
+    });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', cerrarMenu));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menu.classList.contains('abierto')) {
+        cerrarMenu();
+        botonMenu.focus();
+      }
     });
   </script>
 </body>

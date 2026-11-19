@@ -53,6 +53,7 @@
       <nav class="menu" id="menu">
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#proyectos">Proyectos</a>
+        <a href="curriculum.html">CV</a>
         <a href="contacto.html">Contacto</a>
         <span class="menu__sep" aria-hidden="true"></span>
         <a href="index.html" class="idioma activo">ES</a>
@@ -64,25 +65,30 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="contenedor hero__interior">
-      <div class="hero__texto">
-        <span class="ceja">Desarrollador de software · Salobreña (España)</span>
-        <h1 class="hero__titulo">Jesús<br>Castilla</h1>
-        <p class="hero__bajada">Creo tecnología al servicio de las personas —no al revés—: software discreto y honesto que resuelve problemas reales con la elegancia de lo que no se nota.</p>
-        <p class="hero__fundador">Fundador de <strong>DiploTech</strong>, mi marca personal.</p>
-        <div class="hero__acciones">
-          <a class="boton boton--verde" href="#proyectos">Ver proyectos</a>
-          <a class="boton boton--fantasma" href="contacto.html">Contactar</a>
+  <main>
+    <section class="hero">
+      <div class="contenedor hero__interior">
+        <div class="hero__texto">
+          <div class="hero__badge">
+            <span class="badge-punto" aria-hidden="true"></span>
+            <span>Disponible para empleo y proyectos</span>
+          </div>
+          <span class="ceja">Desarrollador de software · Salobreña (España)</span>
+          <h1 class="hero__titulo">Jesús<br>Castilla</h1>
+          <p class="hero__bajada">Creo tecnología al servicio de las personas —no al revés—: software discreto y honesto que resuelve problemas reales con la elegancia de lo que no se nota.</p>
+          <p class="hero__fundador">Fundador de <strong>DiploTech</strong>, mi marca personal.</p>
+          <div class="hero__acciones">
+            <a class="boton boton--verde" href="#proyectos">Ver proyectos</a>
+            <a class="boton boton--fantasma" href="curriculum.html">Ver CV</a>
+            <a class="boton boton--fantasma" href="contacto.html">Contactar</a>
+          </div>
+        </div>
+        <div class="hero__logo">
+          <div class="hero__halo" aria-hidden="true"></div>
+          <img src="assets/logo.png" alt="Logotipo de DiploTech">
         </div>
       </div>
-      <div class="hero__logo">
-        <div class="hero__halo" aria-hidden="true"></div>
-        <img src="assets/logo.png" alt="Logotipo de DiploTech">
-      </div>
-    </div>
-  </section>
-  <main>
+    </section>
     <section class="seccion" id="sobre-mi">
       <div class="contenedor sobre-mi aparecer">
         <div class="sobre-mi__cabecera">
@@ -140,78 +146,85 @@
           <h2 class="seccion__titulo">Proyectos</h2>
           <p class="seccion__intro">Productos reales en producción y proyectos de I+D propios, diseñados y desarrollados de extremo a extremo.</p>
         </div>
+        <div class="filtros aparecer" role="tablist" aria-label="Filtrar proyectos por categoría">
+          <button class="filtro activo" data-filtro="todos" role="tab" aria-selected="true">Todos (13)</button>
+          <button class="filtro" data-filtro="mobile" role="tab" aria-selected="false">Mobile</button>
+          <button class="filtro" data-filtro="web" role="tab" aria-selected="false">Web & Backend</button>
+          <button class="filtro" data-filtro="sistemas" role="tab" aria-selected="false">Sistemas & Cloud</button>
+          <button class="filtro" data-filtro="id" role="tab" aria-selected="false">I+D / Hardware</button>
+        </div>
         <div class="grid">
         <!-- PROYECTOS:INICIO -->
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="mobile">
             <div class="proyecto__top"><span class="proyecto__tag">Android · Kotlin</span><span class="proyecto__num">01</span></div>
             <h3 class="proyecto__titulo">Barrioteca — App Android</h3>
             <p class="proyecto__texto">Gestión de préstamos, escáner de códigos de barras, inicio de sesión local y sincronización desatendida con Jetpack Compose.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://github.com/jesuscastilla/barrioteca-android" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="mobile">
             <div class="proyecto__top"><span class="proyecto__tag">Android · Kotlin</span><span class="proyecto__num">02</span></div>
             <h3 class="proyecto__titulo">Mondera's App</h3>
             <p class="proyecto__texto">Calendario CalDAV (Nextcloud), correo, panel web y explorador de archivos de Synology unificados en una sola app Android para las organizadoras de Lebeche; Material 3 y modo oscuro.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://github.com/jesuscastilla/monderas-app" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="web">
             <div class="proyecto__top"><span class="proyecto__tag">Web · React</span><span class="proyecto__num">03</span></div>
             <h3 class="proyecto__titulo">Barrioteca — Web/PWA</h3>
             <p class="proyecto__texto">Frontend con React 19, Vite y Tailwind. Interacción instantánea sin service workers que rompan la actualización.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://www.corrientelebeche.es/barrioteca/" target="_blank" rel="noopener">En vivo ↗</a><a class="flecha" href="https://github.com/jesuscastilla/barrioteca-web" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="web">
             <div class="proyecto__top"><span class="proyecto__tag">Web · HTML/CSS/JS</span><span class="proyecto__num">04</span></div>
             <h3 class="proyecto__titulo">Web oficial Lebeche</h3>
             <p class="proyecto__texto">Sitio estático e indexable alimentado por JSON, con panel de administración propio para editar contenidos.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://www.corrientelebeche.es/lebeche/" target="_blank" rel="noopener">En vivo ↗</a><a class="flecha" href="https://github.com/jesuscastilla/lebeche-web" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="sistemas">
             <div class="proyecto__top"><span class="proyecto__tag">Cloud · Docker</span><span class="proyecto__num">05</span></div>
             <h3 class="proyecto__titulo">Nube Lebeche — Nextcloud</h3>
             <p class="proyecto__texto">Nube privada autohospedada para la asociación Lebeche: Nextcloud 35 en Docker sobre Synology, con archivos compartidos por comisiones, calendarios CalDAV, contactos CardDAV, correo integrado y edición ofimática colaborativa.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://nube.corrientelebeche.es/" target="_blank" rel="noopener">En vivo ↗</a><a class="flecha" href="https://github.com/jesuscastilla/lebeche-nextcloud" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="mobile">
             <div class="proyecto__top"><span class="proyecto__tag">iOS · Swift</span><span class="proyecto__num">06</span></div>
             <h3 class="proyecto__titulo">Barrioteca — iOS</h3>
             <p class="proyecto__texto">Cascarón nativo (WKWebView + SwiftUI) con acceso a cámara para el escáner de códigos.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://github.com/jesuscastilla/barrioteca-ios" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="web">
             <div class="proyecto__top"><span class="proyecto__tag">Backend · PHP</span><span class="proyecto__num">07</span></div>
             <h3 class="proyecto__titulo">Backend SLiMS</h3>
             <p class="proyecto__texto">API REST y scripts de importación de ISBN sobre SLiMS (PHP 8 + MariaDB).</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://www.corrientelebeche.es/slims/" target="_blank" rel="noopener">En vivo ↗</a><a class="flecha" href="https://github.com/jesuscastilla/barrioteca-slims" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="sistemas">
             <div class="proyecto__top"><span class="proyecto__tag">Sistemas · Linux</span><span class="proyecto__num">08</span></div>
             <h3 class="proyecto__titulo">TapeOS</h3>
             <p class="proyecto__texto">Sistema operativo propio de software libre, hecho en Andalucía, basado en ChromeOS/ChromiumOS, con instalador nativo para Windows y Google Apps opcionales.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://github.com/jesuscastilla/TapeOS" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="sistemas">
             <div class="proyecto__top"><span class="proyecto__tag">Infraestructura</span><span class="proyecto__num">09</span></div>
             <h3 class="proyecto__titulo">Infraestructura NAS</h3>
             <p class="proyecto__texto">Hosting autogestionado en Synology: Web Station + Nginx, Docker, certificados, proxies inversos con Cloudflare y servicios como Nextcloud, correo y newsletter.</p>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="sistemas">
             <div class="proyecto__top"><span class="proyecto__tag">Infraestructura · Linux</span><span class="proyecto__num">10</span></div>
             <h3 class="proyecto__titulo">Servidor auxiliar ZimaOS</h3>
             <p class="proyecto__texto">Servidor x86 con ZimaOS dedicado a los servicios Docker de Lebeche: OnlyOffice para edición ofimática y HPB (High Performance Backend) para Nextcloud Talk, con almacenamiento persistente, arranque automático y actualizaciones controladas.</p>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="sistemas">
             <div class="proyecto__top"><span class="proyecto__tag">Sistemas · Hackintosh</span><span class="proyecto__num">11</span></div>
             <h3 class="proyecto__titulo">Hackintosh — macOS 26 en PC</h3>
             <p class="proyecto__texto">macOS 26 Tahoe sobre hardware no-Apple (ASUS PRIME Z590-P WIFI + i5-11600K + RX 5700 XT): OpenCore 1.0.8, SMBIOS MacPro7,1, Wi-Fi/Bluetooth Intel AX201 y arranque dual con Windows.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://github.com/jesuscastilla/hackintosh-Z590" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="id">
             <div class="proyecto__top"><span class="proyecto__tag">Android · Ingeniería inversa</span><span class="proyecto__num">12</span></div>
             <h3 class="proyecto__titulo">GBOS-PixelTablet</h3>
             <p class="proyecto__texto">Ingeniería inversa y port de la interfaz de escritorio de GoogleBookOS (Aluminium OS, Android 17) a una Pixel Tablet sin root: extracción de particiones EROFS, auditoría de APKs, análisis de flags aconfig/Phenotype y una app lanzadora nativa.</p>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="id">
             <div class="proyecto__top"><span class="proyecto__tag">I+D · Android x86</span><span class="proyecto__num">13</span></div>
             <h3 class="proyecto__titulo">GoogleTVx86</h3>
             <p class="proyecto__texto">Port nativo de Google TV (Android 16 x86_64) a PCs: arranque desde USB o instalación en disco, HALs reales de hardware en lugar de los del emulador y soporte de Play Store. Proyecto de I+D en fase inicial.</p>
@@ -242,6 +255,7 @@
         </div>
         <nav class="pie__enlaces">
           <a href="index.html">Inicio</a>
+          <a href="curriculum.html">Currículum</a>
           <a href="contacto.html">Contacto</a>
           <a href="https://github.com/jesuscastilla" target="_blank" rel="noopener">GitHub</a>
           <a href="https://www.linkedin.com/in/jesuscastillalacal" target="_blank" rel="noopener">LinkedIn</a>
@@ -256,17 +270,53 @@
   <script>
     const botonMenu = document.getElementById('botonMenu');
     const menu = document.getElementById('menu');
+    function cerrarMenu() {
+      menu.classList.remove('abierto');
+      botonMenu.classList.remove('activo');
+      botonMenu.setAttribute('aria-expanded', 'false');
+    }
     botonMenu.addEventListener('click', () => {
       const abierto = menu.classList.toggle('abierto');
       botonMenu.classList.toggle('activo', abierto);
       botonMenu.setAttribute('aria-expanded', String(abierto));
     });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', cerrarMenu));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menu.classList.contains('abierto')) {
+        cerrarMenu();
+        botonMenu.focus();
+      }
+    });
+
     const obs = new IntersectionObserver((entradas) => {
       entradas.forEach((e) => {
         if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
       });
     }, { threshold: 0.08 });
     document.querySelectorAll('.aparecer').forEach((el) => obs.observe(el));
+
+    // Filtros de proyectos
+    const filtros = document.querySelectorAll('.filtro');
+    const proyectos = document.querySelectorAll('.proyecto');
+    filtros.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filtros.forEach(b => {
+          b.classList.remove('activo');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('activo');
+        btn.setAttribute('aria-selected', 'true');
+        const cat = btn.dataset.filtro;
+        proyectos.forEach(p => {
+          if (cat === 'todos' || p.dataset.categoria === cat) {
+            p.classList.remove('oculto');
+            p.classList.add('visible');
+          } else {
+            p.classList.add('oculto');
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>

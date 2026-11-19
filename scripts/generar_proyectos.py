@@ -32,6 +32,7 @@ def api_repo(user, repo):
 
 def render(p, num, lang, data):
     tag = p.get("tag_" + lang) or ""
+    categoria = p.get("categoria") or "todos"
     titulo = p.get("titulo_" + lang) or p.get("repo") or ""
     desc = p.get("desc_" + lang)
     if not desc and data:
@@ -48,7 +49,7 @@ def render(p, num, lang, data):
         enlaces.append(f'<a class="flecha" href="{gh}" target="_blank" rel="noopener">{label}</a>')
     ehtml = f'            <div class="proyecto__enlaces">{"".join(enlaces)}</div>\n' if enlaces else ""
     return (
-        f'          <article class="proyecto aparecer">\n'
+        f'          <article class="proyecto aparecer" data-categoria="{categoria}">\n'
         f'            <div class="proyecto__top"><span class="proyecto__tag">{tag}</span><span class="proyecto__num">{num:02d}</span></div>\n'
         f'            <h3 class="proyecto__titulo">{titulo}</h3>\n'
         f'            <p class="proyecto__texto">{desc}</p>\n'

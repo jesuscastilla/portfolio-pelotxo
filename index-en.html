@@ -53,6 +53,7 @@
       <nav class="menu" id="menu">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
+        <a href="curriculum-en.html">Resume</a>
         <a href="contacto-en.html">Contact</a>
         <span class="menu__sep" aria-hidden="true"></span>
         <a href="index.html" class="idioma">ES</a>
@@ -64,25 +65,30 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="contenedor hero__interior">
-      <div class="hero__texto">
-        <span class="ceja">Software developer · Salobreña (Spain)</span>
-        <h1 class="hero__titulo">Jesús<br>Castilla</h1>
-        <p class="hero__bajada">I build technology in service of people —not the other way around: quiet, honest software that solves real problems with the elegance of what goes unnoticed.</p>
-        <p class="hero__fundador">Founder of <strong>DiploTech</strong>, my personal brand.</p>
-        <div class="hero__acciones">
-          <a class="boton boton--verde" href="#projects">View projects</a>
-          <a class="boton boton--fantasma" href="contacto-en.html">Get in touch</a>
+  <main>
+    <section class="hero">
+      <div class="contenedor hero__interior">
+        <div class="hero__texto">
+          <div class="hero__badge">
+            <span class="badge-punto" aria-hidden="true"></span>
+            <span>Available for projects & hiring</span>
+          </div>
+          <span class="ceja">Software developer · Salobreña (Spain)</span>
+          <h1 class="hero__titulo">Jesús<br>Castilla</h1>
+          <p class="hero__bajada">I build technology in service of people —not the other way around: quiet, honest software that solves real problems with the elegance of what goes unnoticed.</p>
+          <p class="hero__fundador">Founder of <strong>DiploTech</strong>, my personal brand.</p>
+          <div class="hero__acciones">
+            <a class="boton boton--verde" href="#projects">View projects</a>
+            <a class="boton boton--fantasma" href="curriculum-en.html">View Resume</a>
+            <a class="boton boton--fantasma" href="contacto-en.html">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero__logo">
+          <div class="hero__halo" aria-hidden="true"></div>
+          <img src="assets/logo.png" alt="DiploTech logo">
         </div>
       </div>
-      <div class="hero__logo">
-        <div class="hero__halo" aria-hidden="true"></div>
-        <img src="assets/logo.png" alt="DiploTech logo">
-      </div>
-    </div>
-  </section>
-  <main>
+    </section>
     <section class="seccion" id="about">
       <div class="contenedor sobre-mi aparecer">
         <div class="sobre-mi__cabecera">
@@ -140,78 +146,85 @@
           <h2 class="seccion__titulo">Projects</h2>
           <p class="seccion__intro">Real products in production and personal R&D projects, designed and developed end to end.</p>
         </div>
+        <div class="filtros aparecer" role="tablist" aria-label="Filter projects by category">
+          <button class="filtro activo" data-filtro="todos" role="tab" aria-selected="true">All (13)</button>
+          <button class="filtro" data-filtro="mobile" role="tab" aria-selected="false">Mobile</button>
+          <button class="filtro" data-filtro="web" role="tab" aria-selected="false">Web & Backend</button>
+          <button class="filtro" data-filtro="sistemas" role="tab" aria-selected="false">Systems & Cloud</button>
+          <button class="filtro" data-filtro="id" role="tab" aria-selected="false">R&D / Hardware</button>
+        </div>
         <div class="grid">
         <!-- PROYECTOS:INICIO -->
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="mobile">
             <div class="proyecto__top"><span class="proyecto__tag">Android · Kotlin</span><span class="proyecto__num">01</span></div>
             <h3 class="proyecto__titulo">Barrioteca — Android App</h3>
             <p class="proyecto__texto">Loan management, barcode scanner, local login and background sync built with Jetpack Compose.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://github.com/jesuscastilla/barrioteca-android" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="mobile">
             <div class="proyecto__top"><span class="proyecto__tag">Android · Kotlin</span><span class="proyecto__num">02</span></div>
             <h3 class="proyecto__titulo">Mondera's App</h3>
             <p class="proyecto__texto">CalDAV calendar (Nextcloud), mail, web panel and Synology file browser unified in one Android app for Lebeche's organizers; Material 3 and dark mode.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://github.com/jesuscastilla/monderas-app" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="web">
             <div class="proyecto__top"><span class="proyecto__tag">Web · React</span><span class="proyecto__num">03</span></div>
             <h3 class="proyecto__titulo">Barrioteca — Web/PWA</h3>
             <p class="proyecto__texto">React 19, Vite and Tailwind frontend. Instant interaction with no service workers breaking updates.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://www.corrientelebeche.es/barrioteca/" target="_blank" rel="noopener">Live ↗</a><a class="flecha" href="https://github.com/jesuscastilla/barrioteca-web" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="web">
             <div class="proyecto__top"><span class="proyecto__tag">Web · HTML/CSS/JS</span><span class="proyecto__num">04</span></div>
             <h3 class="proyecto__titulo">Lebeche Official Website</h3>
             <p class="proyecto__texto">Static, indexable site fed by JSON, with its own admin panel for editing content.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://www.corrientelebeche.es/lebeche/" target="_blank" rel="noopener">Live ↗</a><a class="flecha" href="https://github.com/jesuscastilla/lebeche-web" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="sistemas">
             <div class="proyecto__top"><span class="proyecto__tag">Cloud · Docker</span><span class="proyecto__num">05</span></div>
             <h3 class="proyecto__titulo">Lebeche Cloud — Nextcloud</h3>
             <p class="proyecto__texto">Self-hosted private cloud for the Lebeche association: Nextcloud 35 in Docker on Synology, with files shared across committees, CalDAV calendars, CardDAV contacts, integrated mail and collaborative document editing.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://nube.corrientelebeche.es/" target="_blank" rel="noopener">Live ↗</a><a class="flecha" href="https://github.com/jesuscastilla/lebeche-nextcloud" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="mobile">
             <div class="proyecto__top"><span class="proyecto__tag">iOS · Swift</span><span class="proyecto__num">06</span></div>
             <h3 class="proyecto__titulo">Barrioteca — iOS</h3>
             <p class="proyecto__texto">Native wrapper (WKWebView + SwiftUI) with camera access for the barcode scanner.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://github.com/jesuscastilla/barrioteca-ios" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="web">
             <div class="proyecto__top"><span class="proyecto__tag">Backend · PHP</span><span class="proyecto__num">07</span></div>
             <h3 class="proyecto__titulo">SLiMS Backend</h3>
             <p class="proyecto__texto">REST API and ISBN import scripts on top of SLiMS (PHP 8 + MariaDB).</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://www.corrientelebeche.es/slims/" target="_blank" rel="noopener">Live ↗</a><a class="flecha" href="https://github.com/jesuscastilla/barrioteca-slims" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="sistemas">
             <div class="proyecto__top"><span class="proyecto__tag">Systems · Linux</span><span class="proyecto__num">08</span></div>
             <h3 class="proyecto__titulo">TapeOS</h3>
             <p class="proyecto__texto">A free-software operating system made in Andalusia, based on ChromeOS/ChromiumOS, with a native Windows installer and optional Google Apps.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://github.com/jesuscastilla/TapeOS" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="sistemas">
             <div class="proyecto__top"><span class="proyecto__tag">Infrastructure</span><span class="proyecto__num">09</span></div>
             <h3 class="proyecto__titulo">NAS Infrastructure</h3>
             <p class="proyecto__texto">Self-hosted Synology stack: Web Station + Nginx, Docker, certificates, Cloudflare reverse proxies and services such as Nextcloud, mail and newsletter.</p>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="sistemas">
             <div class="proyecto__top"><span class="proyecto__tag">Infrastructure · Linux</span><span class="proyecto__num">10</span></div>
             <h3 class="proyecto__titulo">ZimaOS Auxiliary Server</h3>
             <p class="proyecto__texto">x86 server running ZimaOS for Lebeche's Docker services: OnlyOffice for document editing and HPB (High Performance Backend) for Nextcloud Talk, with persistent storage, automatic startup and controlled updates.</p>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="sistemas">
             <div class="proyecto__top"><span class="proyecto__tag">Systems · Hackintosh</span><span class="proyecto__num">11</span></div>
             <h3 class="proyecto__titulo">Hackintosh — macOS 26 on PC</h3>
             <p class="proyecto__texto">macOS 26 Tahoe on non-Apple hardware (ASUS PRIME Z590-P WIFI + i5-11600K + RX 5700 XT): OpenCore 1.0.8, MacPro7,1 SMBIOS, Intel AX201 Wi-Fi/Bluetooth and dual boot with Windows.</p>
             <div class="proyecto__enlaces"><a class="flecha" href="https://github.com/jesuscastilla/hackintosh-Z590" target="_blank" rel="noopener">GitHub ↗</a></div>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="id">
             <div class="proyecto__top"><span class="proyecto__tag">Android · Reverse engineering</span><span class="proyecto__num">12</span></div>
             <h3 class="proyecto__titulo">GBOS-PixelTablet</h3>
             <p class="proyecto__texto">Reverse engineering and port of the GoogleBookOS (Aluminium OS, Android 17) desktop UI to an unrooted Pixel Tablet: EROFS partition extraction, APK auditing, aconfig/Phenotype flag analysis and a native launcher app.</p>
           </article>
-          <article class="proyecto aparecer">
+          <article class="proyecto aparecer" data-categoria="id">
             <div class="proyecto__top"><span class="proyecto__tag">R&D · Android x86</span><span class="proyecto__num">13</span></div>
             <h3 class="proyecto__titulo">GoogleTVx86</h3>
             <p class="proyecto__texto">Native port of Google TV (Android 16 x86_64) to PCs: USB boot or disk install, real hardware HALs instead of the emulator's and Play Store support. Early-stage R&D project.</p>
@@ -242,6 +255,7 @@
         </div>
         <nav class="pie__enlaces">
           <a href="index-en.html">Home</a>
+          <a href="curriculum-en.html">Resume</a>
           <a href="contacto-en.html">Contact</a>
           <a href="https://github.com/jesuscastilla" target="_blank" rel="noopener">GitHub</a>
           <a href="https://www.linkedin.com/in/jesuscastillalacal" target="_blank" rel="noopener">LinkedIn</a>
@@ -256,17 +270,53 @@
   <script>
     const botonMenu = document.getElementById('botonMenu');
     const menu = document.getElementById('menu');
+    function cerrarMenu() {
+      menu.classList.remove('abierto');
+      botonMenu.classList.remove('activo');
+      botonMenu.setAttribute('aria-expanded', 'false');
+    }
     botonMenu.addEventListener('click', () => {
       const abierto = menu.classList.toggle('abierto');
       botonMenu.classList.toggle('activo', abierto);
       botonMenu.setAttribute('aria-expanded', String(abierto));
     });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', cerrarMenu));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menu.classList.contains('abierto')) {
+        cerrarMenu();
+        botonMenu.focus();
+      }
+    });
+
     const obs = new IntersectionObserver((entradas) => {
       entradas.forEach((e) => {
         if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
       });
     }, { threshold: 0.08 });
     document.querySelectorAll('.aparecer').forEach((el) => obs.observe(el));
+
+    // Project filters
+    const filtros = document.querySelectorAll('.filtro');
+    const proyectos = document.querySelectorAll('.proyecto');
+    filtros.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filtros.forEach(b => {
+          b.classList.remove('activo');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('activo');
+        btn.setAttribute('aria-selected', 'true');
+        const cat = btn.dataset.filtro;
+        proyectos.forEach(p => {
+          if (cat === 'todos' || p.dataset.categoria === cat) {
+            p.classList.remove('oculto');
+            p.classList.add('visible');
+          } else {
+            p.classList.add('oculto');
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>
